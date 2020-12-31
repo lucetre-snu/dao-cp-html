@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DAO-CP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<style>
+	.navbar{ background-color:#0784b5; color:#eeeeee;}
+	.navbar a{color:#eeeeee; }
+	.navbar a:hover, .navbar a:focus{background-color:rgb(152,77,14) !important; color:#fffff; }
+	.navblank{height:50px; }
+	.navbar .navbar-toggle>.icon-bar{background-color:#ffffff; }
+	.navbar .navbar-toggle:hover>.icon-bar{background-color:#ffffff; }
+    /* .title_box{background-image: url(resources/images/background.jpg); } */
+	.title_box{background-color: #39ace7; }
+	.title_box h1{color: #fff; text-shadow: 1pt 1pt 1pt #000; }
+	.title_box .description{text-align:justify; color:white; text-shadow: 1px 1px 0px #000; font-size:13pt; }
+	.table>tbody>tr:nth-child(even){background-color:#cbdff2; }
+	 table.table{border-top: 1px solid #eee; }
+	.table_scrollable{overflow:auto; }
+	h2{font-size: 25pt; color: #39ace7; padding-top: 80px; margin-top: -80px; }
+	@media screen and (min-width: 768px)
+	.title_box.jumbotron h1, .title_box.jumbotron .h1 {
+        font-size: 50px;
+	}
+	body {
+		  font-family:      Arial, Geneva, sans-serif;
+		  font-size:        medium;
+		  font-weight:      normal;
+	}
+	#emp2 {font-weight: bold; color: #380B61;}
+	#emp  {font-weight: bold; color: #380B61;}
+</style>
+</head>
+<body>
+
+<a name="home"></a>
+<nav class="navbar navbar-fixed-top" role="navigation">
+	<div class="container">
+    
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" id="trsvd_header" href="#">DAO-CP</a>
+	</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#paper">Paper</a></li>
+				<li><a href="#code">Codes</a></li>
+				<li><a href="#datasets">Datasets</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="navblank">
+</div>
+
+<div class="title_box jumbotron">
+	<div class="container">
+		<h1 style="font-size: 45px;">DAO-CP</h1>
+		<div class="description">
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="content_box">
+		<a name="overview"></a>
+		<h2>Overview</h2>
+        <p>
+.
+         </p>
+        
+		<br />
+
+        
+
+	<a name="paper"></a>
+	<h2>Paper</h2>
+	<p><span id="emp">D-Tucker</span> is described in the following paper:</p>
+	<ul>
+		<li>
+			<b>D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors</b> <br/> 
+			Jun-Gi Jang, and U Kang. <br/> 
+			<p> The paper is accepted to ICDE2020 as a short paper</p>
+			<a href="resources/paper.pdf" target="_blank">[Paper]</a>
+ 			<!-- <a href="resources/Supplementary.pdf" target="_blank">[Supplementary document]</a> -->
+		</li>
+	</ul>
+	<br/>
+
+	<a name="code"></a>
+	<h2>Code </h2>
+<!--        <p>The code of the methods will be uploaded</p> -->
+	<ul>			
+            <li>
+            DTucker-v1.0: <a href="resources/DTucker-v1.0.tar.gz" target="_blank">[Download]</a>
+            </li>
+	</ul>		
+	<br/>
+
+		<a name="datasets"></a>
+		<h2>Datasets </h2>
+		<div class="table_scrollable">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th><th>#Order</th><th>#Dimensionality</th><th>Description</th><th>Link</th><th>Download</th>
+					</tr>
+				</thead>
+				<tbody>
+                    <tr>
+                        <td>Brainq</td><td>3</td><td>(360,21764,9)</td>
+                        <td>fMRI dataset. consist of (word,voxel, person; measurement)</td>
+                        <td><a href="http://www.cs.cmu.edu/afs/cs/project/theo-73/www/science2008/data.html">Brainq</a></td>
+                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/brainq.tar.gz">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Boats</td><td>3</td><td>(320,240,7000)</td>
+                        <td>gray scale videos. consist of (height,width,frame; value)</td>
+                        <td><a href="http://changedetection.net/">Boats</a></td>
+                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/boats.tar.gz">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Air Quality</td><td>3</td><td>(30648, 376, 6)</td>
+                        <td>air pollutants information in Korea. consists of (timestamp in hour, location, atmospheric pollutants; measurement)</td>
+                        <td><a href="https://www.airkorea.or.kr">Korean Air Quality</a></td>
+                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/airquality.tar.gz">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>HSI</td><td>4</td><td>(1021,1340,33,8)</td>
+                        <td>hyperspectral images of natural scenes. consist of (number of images, spatial dimension (x), spatial dimension (y), spectral dimension; value)</td>
+                        <td><a href="https://personalpages.manchester.ac.uk/staff/d.h.foster/Hyperspectral_images_of_natural_scenes_04.html">HSI</a></td>
+                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/hsi.tar.gz">Download</a></td>
+                    </tr>
+  			</tbody>
+			</table>
+		</div>
+		<h3> Update Note </h3>
+		2020-10-31: README file of AirQuality dataset is updated. Meta files (time dictionary, location dictionary, and pollutants dictionary) of the AirQuality dataset are added.
+		<br/>
+
+
+	</div>	
+</div>
+
+
+<div class="navblank">
+</div>
+<div class="navblank">
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+$("#trsvd_header").click(function() {
+    $("html, body").animate({scrollTop: 0});
+    return false;
+});
+</script>
+</body>
+</html>
+
