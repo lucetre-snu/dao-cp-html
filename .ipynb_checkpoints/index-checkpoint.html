@@ -4,6 +4,7 @@
 <title>DAO-CP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
 <style>
 	.navbar{ background-color:#0784b5; color:#eeeeee;}
 	.navbar a{color:#eeeeee; }
@@ -95,8 +96,6 @@ DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, and 
         
 		<br />
 
-        
-
 	<a name="paper"></a>
 	<h2>Paper</h2>
 	<ul>
@@ -115,7 +114,7 @@ DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, and 
 <!--        <p>The code of the methods will be uploaded</p> -->
 	<ul>			
             <li>
-            The code used in the paper is available. <a href="resources/DAO-CP_v1.0.zip" target="_blank">[Download]</a>
+            The code and datasets used in the paper is available. <a href="resources/DAO-CP_v1.0.zip" target="_blank">[Download]</a>
             </li>
 	</ul>		
 	<br/>
@@ -132,47 +131,49 @@ DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, and 
 <br>
 </center>
 
-1. Synthetic dataset is made of concatenated tensors which is summation of three tensors `T_main`, `T_theme`, and `T_noise`.<br>
-Each tensor refers to 100x, 10x and 1x normal distributed randomized tensor. 
-2. Sample video dataset is a series of animation frames whose pixel has its RGB value.
-3. Stock dataset involves 140 stocks data existing from Jan 2, 2008 to June 30, 2020 among Korea Stock Price Index 200 (KOSPI200). Features are sampled as adjusted opening/highest/lowest/closing price and trading ratio among total shares.
-4. Airport hall dataset is made of a recorded video in an airport.
-5. Air quality dataset is a set of daily measures in Seoul, Korea from Sep 1, 2018 to Sep 31, 2019.<br>
-Measurements of pollutants are recorded varying to dates and locations. -->
+ -->
 		<div class="table_scrollable">
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Name</th><th>#Order</th><th>#Dimensionality</th><th>Description</th><th>Link</th><th>Download</th>
+						<th>Name</th><th>Order</th><th>Dimensions</th><th>Description</th><th>Download</th>
 					</tr>
 				</thead>
 				<tbody>
                     <tr>
-                        <td>Brainq</td><td>3</td><td>(360,21764,9)</td>
-                        <td>fMRI dataset. consist of (word,voxel, person; measurement)</td>
-                        <td><a href="http://www.cs.cmu.edu/afs/cs/project/theo-73/www/science2008/data.html">Brainq</a></td>
-                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/brainq.tar.gz">Download</a></td>
+                        <td>Synthetic Data</td><td>4</td><td>(1K, 10, 20, 30)</td>
+                        <td>Synthetic tensor of various themes. consists of <b>(timestamp, custom mode1, custom mode2, custom mode3)</b></td>
+                        <td><a href="https://github.com/lucetre/online-tensor-decomposition/">Link</a></td>
                     </tr>
                     <tr>
-                        <td>Boats</td><td>3</td><td>(320,240,7000)</td>
-                        <td>gray scale videos. consist of (height,width,frame; value)</td>
-                        <td><a href="http://changedetection.net/">Boats</a></td>
-                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/boats.tar.gz">Download</a></td>
+                        <td>Sample Video</td><td>4</td><td>(205, 240, 320, 3)</td>
+                        <td>Sample video on <a href="https://www.youtube.com/watch?v=EngW7tLk6R8">YouTube</a>. consists of <b>(frame, width, height, RGB colors)</b></td>
+                        <td><a href="https://www.sample-videos.com/">Link</a></td>
                     </tr>
                     <tr>
-                        <td>Air Quality</td><td>3</td><td>(30648, 376, 6)</td>
-                        <td>air pollutants information in Korea. consists of (timestamp in hour, location, atmospheric pollutants; measurement)</td>
-                        <td><a href="https://www.airkorea.or.kr">Korean Air Quality</a></td>
-                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/airquality.tar.gz">Download</a></td>
+                        <td>Stock</td><td>3</td><td>(3K, 140, 5)</td>
+                        <td>Korea stock price. consists of <b>(timestamp in date, stock, price type)</b></td>
+                        <td><a href="https://deeptrade.co/">Link</a></td>
                     </tr>
                     <tr>
-                        <td>HSI</td><td>4</td><td>(1021,1340,33,8)</td>
-                        <td>hyperspectral images of natural scenes. consist of (number of images, spatial dimension (x), spatial dimension (y), spectral dimension; value)</td>
-                        <td><a href="https://personalpages.manchester.ac.uk/staff/d.h.foster/Hyperspectral_images_of_natural_scenes_04.html">HSI</a></td>
-                        <td><a href="http://datalab.snu.ac.kr/data/D-Tucker/hsi.tar.gz">Download</a></td>
+                        <td>Airport Hall</td><td>3</td><td>(200, 144, 176)</td>
+                        <td>Airport hall video. consists of <b>(frame, width, height)</b></td>
+                        <td><a href="https://github.com/hiroyuki-kasai/OLSTEC/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Korea Air Quality</td><td>3</td><td>(10K, 323, 6)</td>
+                        <td>air pollutants information in Korea. consists of <b>(timestamp in hour, location, atmospheric pollutants, measurement)</b></td>
+                        <td><a href="https://www.airkorea.or.kr/eng/">Link</a></td>
                     </tr>
   			</tbody>
 			</table>
+<!--             <ol>
+                <li>Synthetic dataset is made of concatenated tensors which is summation of three tensors `T_main`, `T_theme`, and `T_noise`. Each tensor refers to 100x, 10x and 1x normal distributed randomized tensor.</li>
+                <li>Sample video dataset is a series of animation frames whose pixel has its RGB value.</li>
+                <li>Stock dataset involves 140 stocks data existing from Jan 2, 2008 to June 30, 2020 among Korea Stock Price Index 200 (KOSPI200). Features are sampled as adjusted opening/highest/lowest/closing price and trading ratio among total shares.</li>
+                <li>Airport hall dataset is made of a recorded video in an airport.</li>
+                <li>Air quality dataset is a set of daily measures in Seoul, Korea from Sep 1, 2018 to Sep 31, 2019. Measurements of pollutants are recorded varying to dates and locations.</li>
+            </ol> -->
 		</div>
 <!-- 		<h3> Update Note </h3>
 		2020-10-31: README file of AirQuality dataset is updated. Meta files (time dictionary, location dictionary, and pollutants dictionary) of the AirQuality dataset are added.
