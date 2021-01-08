@@ -85,17 +85,18 @@
 How can we decompose a streaming tensor accurately and efficiently?
 Many real-world tensors are dynamic, that is, their size and value evolve.
 CP decomposition, one of the most popular tools for analyzing tensors, is not readily applicable to temporally growing tensors.
-Because a tensor stream creates data slices in a concise period,
-existing methods for dynamic tensor decomposition such as OnlineCP have focused on reducing the running time of algorithm;
+As a tensor stream creates data slices in a concise period,
+existing methods for dynamic tensor decomposition such have focused on reducing the running time of algorithm;
 however, this often entails a substantial loss of accuracy.
 Real-world data have temporal characteristics and change throughout time.
-In this work, we propose a novel approach called DAO-CP for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
-DAO-CP detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factor matrices by varying decomposition parameters.
+In this work, we propose DAO-CP, a novel approach for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
+DAO-CP detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
 The split process enables memory-efficient management against excessive computations due to the time-incremental factor, while the refinement process achieves much more accurate decomposition.
 Change detection by tracking every local error norm of each data slice determines which process to be executed.
 Overall decision-making module in an updatable tensor stream framework improves DAO-CP to have better efficiency and scalability.
-We empirically demonstrate that the proposed DAO-CP achieves comparable accuracy on synthetic and real-world datasets in an online streaming environment.
-DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, and allows efficient decomposition up to 16.5 time reduced memory than existing methods with little sacrifice in speed.
+Though our experiments,
+%We empirically demonstrate that the proposed DAO-CP achieves comparable accuracy on synthetic and real-world datasets in an online streaming environment.
+DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, unholding time and memory efficiency as an online method.
          </p>
         
 		<br />
