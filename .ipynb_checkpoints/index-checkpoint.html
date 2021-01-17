@@ -86,18 +86,19 @@ How can we decompose a streaming tensor accurately and efficiently?
 Many real-world tensors are dynamic, that is, their size and value evolve.
 CP decomposition, one of the most popular tools for analyzing tensors, is not readily applicable to temporally growing tensors.
 As a tensor stream creates data slices in a concise period,
-existing methods for dynamic tensor decomposition such have focused on reducing the running time of algorithm;
+existing methods for dynamic tensor decomposition have focused on reducing the running time of algorithm;
 however, this often entails a substantial loss of accuracy.
 Real-world data have temporal characteristics and change throughout time.
-In this work, we propose DAO-CP, a novel approach for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
-DAO-CP detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
+In this work, we propose <i>DAO-CP</i>, a novel approach for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
+<i>DAO-CP</i> detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
 The split process enables memory-efficient management against excessive computations due to the time-incremental factor, while the refinement process achieves much more accurate decomposition.
 Change detection by tracking every local error norm of each data slice determines which process to be executed.
-Overall decision-making module in an updatable tensor stream framework improves DAO-CP to have better efficiency and scalability.
-Though our experiments, DAO-CP shows higher fitness up to 91.2% while Full-CP shows 83.9% accuracy, unholding time and memory efficiency as an online method.
+Overall decision-making module in an updatable tensor stream framework improves <i>DAO-CP</i> to have better efficiency and scalability.
+Though our experiments,
+<i>DAO-CP</i> shows higher fitness up to 91.2% while <i>Full-CP</i> shows 83.9% accuracy, unholding time and memory efficiency as an online method.
          </p>
         <div style="text-align:center">
-            <img style="width:50%" src="resources/dao-cp.png" alt='dao-cp'>
+            <img style="width:720" src="resources/dao-cp.png" alt='dao-cp'>
         </div>
 		<br />
 
