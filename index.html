@@ -57,8 +57,9 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#overview">Overview</a></li>
 				<li><a href="#paper">Paper</a></li>
-				<li><a href="#code">Codes</a></li>
+				<li><a href="#code">Code</a></li>
 				<li><a href="#datasets">Datasets</a></li>
+				<li><a href="#people">People</a></li>
 			</ul>
 		</div>
 	</div>
@@ -81,15 +82,16 @@
 	<div class="content_box">
 		<a name="overview"></a>
 		<h2>Overview</h2>
-        <p align="justify">
+        <p align="justify" style="text-indent:10%">
 How can we decompose a streaming tensor accurately and efficiently?
 Many real-world tensors are dynamic, that is, their size and value evolve.
 CP decomposition, one of the most popular tools for analyzing tensors, is not readily applicable to temporally growing tensors.
 As a tensor stream creates data slices in a concise period,
 existing methods for dynamic tensor decomposition have focused on reducing the running time of algorithm;
 however, this often entails a substantial loss of accuracy.
-Real-world data have temporal characteristics and change throughout time.
-In this work, we propose <i>DAO-CP</i>, a novel approach for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
+Real-world data have temporal characteristics and change throughout time.</p>
+        <p align="justify" style="text-indent:10%">
+            In this work, we propose <i>DAO-CP</i>, a novel approach for accurate and efficient decomposition adaptive to data changes in higher-order streaming tensors.
 <i>DAO-CP</i> detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
 The split process enables memory-efficient management against excessive computations due to the time-incremental factor, while the refinement process achieves much more accurate decomposition.
 Change detection by tracking every local error norm of each data slice determines which process to be executed.
@@ -170,6 +172,15 @@ Though our experiments,
                 <li>Air quality dataset is a set of daily measures in Seoul, Korea from Sep 1, 2018 to Sep 31, 2019. Measurements of pollutants are recorded varying to dates and locations.</li>
             </ol> -->
 		</div>
+        <a name="people"></a>
+	        <h2>People</h2>
+            <ul style="margin-bottom:36pt">
+            <li><a href="https://lucetre.github.io/">Sangjun Son</a> (Seoul National University)</li>
+            <li>Yongchan Park (Seoul National University)</li>
+            <li><a href="https://datalab.snu.ac.kr/~chominyong/">Minyong Cho</a> (Seoul National University)</li>
+            <li><a href="http://datalab.snu.ac.kr/~ukang">U Kang</a> (Seoul National University)</li>
+	          </ul>
+        
 <!-- 		<h3> Update Note </h3>
 		2020-10-31: README file of AirQuality dataset is updated. Meta files (time dictionary, location dictionary, and pollutants dictionary) of the AirQuality dataset are added.
 		<br/> -->
