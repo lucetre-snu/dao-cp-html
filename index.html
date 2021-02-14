@@ -35,6 +35,7 @@
 	}
 	#emp2 {font-weight: bold; color: #363959;}
 	#emp  {font-weight: bold; color: #363959;}
+    #method {font-weight: bold; color: #6E7C90; }
 </style>
 </head>
 <body>
@@ -91,12 +92,12 @@ leading to an intractable amount of computation.
 Thus, existing methods for dynamic tensor decomposition have focused on reducing the running time of an algorithm;
 however, this in turn results in a substantial loss of accuracy.</p>
         <p align="justify" style="text-indent:10%">
-            In this work, we propose <span style="color:rgb(67,65,191)">DAO-CP</span>, a novel approach for accurate and efficient decomposition that is adaptive to data changes in higher-order streaming tensors.
-<span style="color:rgb(67,65,191)">DAO-CP</span> detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
+            In this work, we propose <span id="method">DAO-CP</span>, a novel approach for accurate and efficient decomposition that is adaptive to data changes in higher-order streaming tensors.
+<span id="method">DAO-CP</span> detects each data slice's theme and performs accuracy optimization by choosing whether to (1) split the tensor or (2) refine its factors with re-decomposition.
 The split process enables memory-efficient management to avoid excessive computations due to the time-incremental factor, while the refinement process achieves much more accurate decomposition.
-<span style="color:rgb(67,65,191)">DAO-CP</span> tracks every local error norm of each data slice to detect a change point and determines which process to be executed.
-The overall decision-making module in an updatable tensor stream framework improves <span style="color:rgb(67,65,191)">DAO-CP</span> to have better efficiency and scalability.
-By maintaining time and memory complexity comparable to state-of-the-art online methods, <span style="color:rgb(67,65,191)">DAO-CP</span> shows higher fitness up to 91.2%, whereas Full-CP exhibits fitness of 83.9%. 
+<span id="method">DAO-CP</span> tracks every local error norm of each data slice to detect a change point and determines which process to be executed.
+The overall decision-making module in an updatable tensor stream framework improves <span id="method">DAO-CP</span> to have better efficiency and scalability.
+By maintaining time and memory complexity comparable to state-of-the-art online methods, <span id="method">DAO-CP</span> shows higher fitness up to 91.2%, whereas Full-CP exhibits fitness of 83.9%. 
          </p>
         <div style="text-align:center">
             <img style="width:720px" src="resources/dao-cp.svg" alt='dao-cp'>
@@ -109,16 +110,16 @@ By maintaining time and memory complexity comparable to state-of-the-art online 
 		<li>
 			<b>DAO-CP: Data-adaptive online CP decomposition</b> <br/> 
 			Sangjun Son*, Yongchan Park*, Minyong Cho, and U Kang <br/> 
-			The paper is submitted to PLOS ONE journal.  <br/>
-			<a href="resources/paper.pdf" target="_blank">[Paper]</a> <br/> <br/>
-            <i> * Both authors contributed equally to this work. </i>
+			The paper is submitted to PLOS ONE journal. <br/>
+            <a href="resources/paper.pdf" target="_blank">[Paper]</a> <br/>
+            <i style="color:gray;font-size:10pt;">* Both authors contributed equally to this work. </i>
  			<!-- <a href="resources/Supplementary.pdf" target="_blank">[Supplementary document]</a> -->
 		</li>
 	</ul>
 	<br/>
 
 	<a name="code"></a>
-	<h2>Code </h2>
+	<h2>Code</h2>
 <!--        <p>The code of the methods will be uploaded</p> -->
 	<ul>			
             <li>
@@ -127,7 +128,7 @@ By maintaining time and memory complexity comparable to state-of-the-art online 
 	</ul>		
 	<br/>
 		<a name="datasets"></a>
-		<h2>Datasets </h2>
+		<h2>Datasets</h2>
 		<div class="table_scrollable">
 			<table class="table">
                 
@@ -140,7 +141,7 @@ By maintaining time and memory complexity comparable to state-of-the-art online 
                     <tr>
                         <td style="vertical-align:middle">Synthetic Data</td><td style="vertical-align:middle">4</td><td style="vertical-align:middle">(1K, 10, 20, 30)</td>
                         <td>Synthetic tensor of various themes. <br>consists of <b>(timestamp, custom mode1, custom mode2, custom mode3)</b></td>
-                        <td style="vertical-align:middle"><a href="https://github.com/lucetre/online-tensor-decomposition/">Link</a></td>
+                        <td style="vertical-align:middle"><a href="https://github.com/snudatalab/DAO-CP/">Link</a></td>
                     </tr>
                     <tr>
                         <td style="vertical-align:middle">Sample Video</td><td style="vertical-align:middle">4</td><td style="vertical-align:middle">(205, 240, 320, 3)</td>
@@ -164,13 +165,6 @@ By maintaining time and memory complexity comparable to state-of-the-art online 
                     </tr>
   			</tbody>
 			</table>
-<!--             <ol>
-                <li>Synthetic dataset is made of concatenated tensors which is summation of three tensors `T_main`, `T_theme`, and `T_noise`. Each tensor refers to 100x, 10x and 1x normal distributed randomized tensor.</li>
-                <li>Sample video dataset is a series of animation frames whose pixel has its RGB value.</li>
-                <li>Stock dataset involves 140 stocks data existing from Jan 2, 2008 to June 30, 2020 among Korea Stock Price Index 200 (KOSPI200). Features are sampled as adjusted opening/highest/lowest/closing price and trading ratio among total shares.</li>
-                <li>Airport hall dataset is made of a recorded video in an airport.</li>
-                <li>Air quality dataset is a set of daily measures in Seoul, Korea from Sep 1, 2018 to Sep 31, 2019. Measurements of pollutants are recorded varying to dates and locations.</li>
-            </ol> -->
 		</div>
         <a name="people"></a>
 	        <h2>People</h2>
